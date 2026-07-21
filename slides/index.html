@@ -171,6 +171,21 @@ code{font-family:var(--mono); font-size:.9em; background:var(--panel2); color:va
   background:rgba(20,32,58,.55); padding:6px 13px; border-radius:999px; transition:opacity .5s}
 .hint.fade{opacity:0}
 
+/* ---- module map (slide 16) — full-width compact list ---- */
+.mmap{border:1.5px solid var(--line); border-radius:16px; overflow:hidden}
+.mgrp{display:flex; align-items:center; gap:10px; padding:6px 22px; background:var(--soft);
+  font-size:20px; font-weight:850; color:var(--deep); letter-spacing:-0.02em}
+.mgrp .gd{font-weight:600; color:var(--muted); font-size:18px}
+.mgrp .gc{margin-left:auto; font-size:16px; font-weight:800; color:#fff; background:var(--accent);
+  border-radius:999px; padding:2px 11px}
+.mline{display:grid; grid-template-columns:240px 1fr; gap:16px; align-items:baseline;
+  padding:5px 22px; border-top:1.5px solid var(--line)}
+.mn{font-family:var(--mono); font-size:20px; font-weight:800; color:var(--fg); white-space:nowrap}
+.mg{font-size:19px; line-height:1.3; color:var(--muted)}
+.exn{display:inline-block; font-family:var(--sans); font-size:14px; font-weight:800; color:var(--deep);
+  background:var(--soft); border:1.5px solid var(--accent); border-radius:6px; padding:1px 7px;
+  margin-right:9px; vertical-align:2px; letter-spacing:0}
+
 /* ---- print: one slide per page, PDF export ---- */
 @media print{
   @page{ size:1280px 720px; margin:0 }
@@ -230,14 +245,14 @@ code{font-family:var(--mono); font-size:.9em; background:var(--panel2); color:va
 
 <!-- 3 · WHY CODEX -->
 <section class="slide" data-title="왜 Codex인가">
-  <div class="head"><span class="no">03</span><h2>왜 Codex인가</h2><span class="tag">답변형이 아니라 작업형</span></div>
-  <div class="grid g4" style="margin-bottom:22px">
+  <div class="head" style="margin-bottom:14px"><span class="no">03</span><h2>왜 Codex인가</h2><span class="tag">답변형이 아니라 작업형</span></div>
+  <div class="grid g4" style="margin-bottom:14px">
     <div class="card"><h5><span class="ic">📁</span>파일 단위</h5><p>코드와 문서를 함께 다루고, 산출물을 파일로 남깁니다.</p></div>
     <div class="card"><h5><span class="ic">🔧</span>도구 실행</h5><p>검색·셸·패치를 연결해 답변보다 <b>실행 결과</b>를 냅니다.</p></div>
     <div class="card"><h5><span class="ic">🔁</span>작업 루프</h5><p>Plan → Build → Verify 흐름과 수정 라운드에 적합합니다.</p></div>
     <div class="card"><h5><span class="ic">♻️</span>재사용</h5><p>반복 업무를 Skill·템플릿으로 축적해 확장합니다.</p></div>
   </div>
-  <div class="cmp" style="margin-bottom:22px">
+  <div class="cmp" style="margin-bottom:12px">
     <div class="col no"><h5>ChatGPT — 옆의 상담사</h5><ul>
       <li>단위는 채팅방, 결과는 답변·초안</li>
       <li>사람이 복사·붙여넣기로 옮김</li></ul></div>
@@ -294,8 +309,8 @@ code{font-family:var(--mono); font-size:.9em; background:var(--panel2); color:va
 
 <!-- 6 · PROMPT 6 ELEMENTS -->
 <section class="slide" data-title="프롬프트 6요소">
-  <div class="head"><span class="no">06</span><h2>일 잘 맡기는 프롬프트 6요소</h2><span class="tag">길이보다 구조</span></div>
-  <div class="grid g3" style="margin-bottom:22px">
+  <div class="head" style="margin-bottom:20px"><span class="no">06</span><h2>일 잘 맡기는 프롬프트 6요소</h2><span class="tag">길이보다 구조</span></div>
+  <div class="grid g3" style="margin-bottom:14px">
     <div class="card"><h5><span class="ic">01</span>목표</h5><p>무엇을 완성해야 하는가 — 한 문장으로.</p></div>
     <div class="card"><h5><span class="ic">02</span>입력 자료</h5><p>참고 파일·링크·기존 코드·디자인 방향.</p></div>
     <div class="card"><h5><span class="ic">03</span>제약 조건</h5><p>범위·형식·톤·기술 스택·제외할 것.</p></div>
@@ -354,7 +369,7 @@ code{font-family:var(--mono); font-size:.9em; background:var(--panel2); color:va
       </ul></div>
     </div>
     <div class="stack fill-h">
-      <div class="shot" data-label="프로젝트 구조와 작업 흐름" style="height:400px">
+      <div class="shot" data-label="프로젝트 구조와 작업 흐름" style="height:362px">
         <img src="../assets/ex1/project-structure-and-flow.png" alt="프로젝트 구조와 작업 흐름" onerror="this.style.display='none'">
       </div>
       <p class="cap">채팅방이 아니라 작업 폴더를 맡깁니다 — 설치 → 폴더 → 기준 문서 → Plan → 생성 → 검수.</p>
@@ -475,20 +490,22 @@ code{font-family:var(--mono); font-size:.9em; background:var(--panel2); color:va
 
 <!-- 16 · CURRICULUM MAP -->
 <section class="slide" data-title="자가학습 지도 · 9모듈">
-  <div class="head"><span class="no">16</span><h2>자가학습 지도 — 9모듈 커리큘럼</h2><span class="tag">입문 · 실무 · 확장</span></div>
-  <table class="tbl">
-    <tr><th>단계</th><th>모듈</th><th>한 줄 목표</th></tr>
-    <tr><td class="groupcell" rowspan="6">입문</td><td class="k">xlsx</td><td>표준용어집을 파일로 외부화해 제각각인 보고서를 하나로 정규화</td></tr>
-    <tr><td class="k">trend-report</td><td>같은 보고서를 단일 → 멀티 → 하네스 3단계로 만들어 본다</td></tr>
-    <tr><td class="k">proposal</td><td>같은 지시서로 단일 프롬프트 vs 전문가 에이전트 팀을 A/B 비교</td></tr>
-    <tr><td class="k">slide</td><td>기준일 셀 하나로 전체가 갱신되는 수집→갱신→디자인 파이프라인</td></tr>
-    <tr><td class="k">map</td><td>스펙(What)을 쓰고 그것을 구현할 하네스(Who·How)를 설계</td></tr>
-    <tr><td class="k">dashboard</td><td>표준 스키마(계약)를 확정한 뒤 팬아웃으로 병렬 생성</td></tr>
-    <tr><td class="groupcell" rowspan="2">실무</td><td class="k">track-a-engineering</td><td>진단→패치→교차 리뷰→CI 게이트로 "초록불 ≠ 정확" 체험</td></tr>
-    <tr><td class="k">track-b-ops</td><td>코드 없이 반복 업무를 규칙·형식 계약으로 자동화</td></tr>
-    <tr><td class="groupcell" rowspan="1">확장</td><td class="k">tool</td><td>오픈소스 MCP 서버로 나만의 Tool을 만들어 양쪽에서 사용</td></tr>
-  </table>
-  <p class="small" style="margin-top:14px">전부 할 필요는 없습니다 — <b>xlsx → trend-report → proposal</b> 세 개만 먼저 해도 하네스의 핵심은 잡힙니다.</p>
+  <div class="head" style="margin-bottom:14px"><span class="no">16</span><h2>자가학습 지도 — 9모듈 커리큘럼</h2><span class="tag">입문 · 실무 · 확장</span></div>
+  <div class="mmap">
+    <div class="mgrp">입문 <span class="gd">실습3~8 · 3부터 선택, 교육 페이지 본문에서 복붙 프롬프트로 진행</span><span class="gc">6</span></div>
+    <div class="mline"><span class="mn"><span class="exn">실습3</span>xlsx</span><span class="mg">표준용어집을 파일로 빼내 제각각인 6개 보고서를 하나로 정규화</span></div>
+    <div class="mline"><span class="mn"><span class="exn">실습4</span>trend-report</span><span class="mg">같은 보고서를 단일 → 멀티 → 하네스 3단계로 만들어 본다</span></div>
+    <div class="mline"><span class="mn"><span class="exn">실습5</span>proposal</span><span class="mg">같은 지시서로 단일 프롬프트 vs 전문가 에이전트 팀을 A/B 비교</span></div>
+    <div class="mline"><span class="mn"><span class="exn">실습6</span>slide</span><span class="mg">기준일 셀 하나로 전체가 갱신되는 수집 → 갱신 → 디자인 파이프라인</span></div>
+    <div class="mline"><span class="mn"><span class="exn">실습7</span>map</span><span class="mg">스펙(What)을 쓰고, 그것을 구현할 하네스(Who·How)를 직접 설계</span></div>
+    <div class="mline"><span class="mn"><span class="exn">실습8</span>dashboard</span><span class="mg">표준 스키마(계약)를 먼저 확정한 뒤 팬아웃으로 병렬 생성</span></div>
+    <div class="mgrp">실무 <span class="gd">저장소 자가학습 · 매일 돌리는 하네스 엔지니어링</span><span class="gc">2</span></div>
+    <div class="mline"><span class="mn">track-a-engineering</span><span class="mg">진단 → 패치 → 교차 리뷰 → CI 게이트로 "초록불 ≠ 정확"을 체험</span></div>
+    <div class="mline"><span class="mn">track-b-ops</span><span class="mg">코드 없이 반복 업무(규제 모니터링)를 규칙·형식 계약으로 자동화</span></div>
+    <div class="mgrp">확장 <span class="gd">세 번째 축 Tool 붙이기</span><span class="gc">1</span></div>
+    <div class="mline"><span class="mn">tool</span><span class="mg">오픈소스 MCP 서버(Python)로 나만의 Tool을 만들어 대화형·자동화 양쪽에서 사용</span></div>
+  </div>
+  <p class="small" style="margin-top:12px">전부 할 필요는 없습니다 — <b>xlsx → trend-report → proposal</b> 세 개만 먼저 해도 하네스의 핵심은 잡힙니다.</p>
 </section>
 
 <!-- 17 · WRAP UP -->
@@ -496,7 +513,7 @@ code{font-family:var(--mono); font-size:.9em; background:var(--panel2); color:va
   <div class="head"><span class="no">17</span><h2>수료 기준 · 다음 행동</h2></div>
   <div class="note" style="margin-bottom:24px"><span class="h">수료 기준</span>"이 일은 <b>단일 프롬프트로 충분한가, 하네스가 필요한가</b>"를 일의 성격(일회성·심층·반복)으로 판단할 수 있고, <b>지식을 파일로 빼는 이유</b>와 <b>검증자를 분리하는 이유</b>를 예로 들 수 있으면 이 과정을 마친 것입니다.</div>
   <div class="grid g2" style="margin-bottom:26px">
-    <div class="card fill"><h5><span class="ic">→</span>다음 행동 1</h5><p><b>저장소를 클론</b>하고 입문 3개 모듈을 순서대로 열어 봅니다.</p>
+    <div class="card fill"><h5><span class="ic">→</span>다음 행동 1</h5><p><b>실습3(xlsx)</b>부터 골라 시작 — 교육 페이지 본문의 복붙 프롬프트를 그대로 따라갑니다.</p>
       <div style="font-family:var(--mono); font-size:19px; color:var(--deep); margin-top:10px">git clone github.com/namojo/codex-edu</div></div>
     <div class="card fill"><h5><span class="ic">→</span>다음 행동 2</h5><p><b>자가학습 가이드</b>를 열어 관찰 포인트와 자가 점검을 따라갑니다.</p>
       <div style="font-family:var(--mono); font-size:19px; color:var(--deep); margin-top:10px">자가학습_가이드.md</div></div>

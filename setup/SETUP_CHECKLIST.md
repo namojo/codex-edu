@@ -66,11 +66,17 @@ Follow the prompts to authenticate via browser.
 
 ## 6. Codex Login
 
-After the Codex CLI is installed, log in with your ChatGPT account:
+> This course's exercises use the **Codex CLI** (`codex` command) in a terminal. You can also use Codex in the browser at [chatgpt.com/codex](https://chatgpt.com/codex) or via an IDE extension, but the login below is for the CLI.
+
+After the Codex CLI is installed, type this command in the terminal to log in with your ChatGPT account:
 
 ```bash
 codex login
 ```
+
+This **opens a browser** → **log in with your ChatGPT account** (a Codex-capable Plus / Pro / Team plan) → when done, **return to the terminal.**
+
+> If the browser doesn't open automatically (e.g., on a work computer), copy the **login URL** shown in the terminal and paste it into your browser to log in.
 
 - [ ] `codex login status` shows you are logged in
 

@@ -66,11 +66,17 @@ gh auth login
 
 ## 6. Codex 로그인
 
-Codex CLI 설치 후 ChatGPT 계정으로 로그인하세요:
+> 이 과정 실습은 **터미널에서 쓰는 Codex CLI**(`codex` 명령) 기준입니다. 브라우저의 [chatgpt.com/codex](https://chatgpt.com/codex)나 IDE 확장으로도 Codex를 쓸 수 있지만, 아래 로그인은 CLI 기준입니다.
+
+Codex CLI 설치 후, 터미널에 아래 명령을 입력해 ChatGPT 계정으로 로그인하세요:
 
 ```bash
 codex login
 ```
+
+실행하면 **브라우저가 열립니다** → **ChatGPT 계정으로 로그인**(Codex 사용 가능한 Plus / Pro / Team 플랜) → 완료되면 **터미널로 돌아옵니다.**
+
+> 회사 PC 등에서 브라우저가 자동으로 열리지 않으면, 터미널에 표시된 **로그인 URL을 복사해 브라우저에 직접 붙여넣어** 로그인하세요.
 
 - [ ] `codex login status` 실행 시 로그인 상태 확인 완료
 
